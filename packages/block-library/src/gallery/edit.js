@@ -197,7 +197,7 @@ class GalleryEdit extends Component {
 	onFocusGalleryCaption() {
 		if ( ! this.state.galleryCaptionFocused ) {
 			this.setState( {
-				galleryCaptionFocused: true,
+				selectedImage: null,
 			} );
 		}
 	}
@@ -345,6 +345,7 @@ class GalleryEdit extends Component {
 					{ ( ! RichText.isEmpty( caption ) || isSelected ) && (
 						<RichText
 							tagName="figcaption"
+							className="blocks-gallery-caption"
 							placeholder={ __( 'Write gallery caption…' ) }
 							value={ caption }
 							unstableOnFocus={ this.onFocusGalleryCaption }
