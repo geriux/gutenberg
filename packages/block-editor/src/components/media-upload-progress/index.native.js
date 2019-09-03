@@ -13,12 +13,14 @@ import {
 import {
 	Spinner,
 } from '@wordpress/components';
+import {
+	ImageSize,
+} from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 
 /**
  * Internal dependencies
  */
-import ImageSize from './image-size';
 import styles from './styles.scss';
 
 export const MEDIA_UPLOAD_STATE_UPLOADING = 1;

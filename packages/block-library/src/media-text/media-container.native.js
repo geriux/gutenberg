@@ -10,8 +10,9 @@ import { IconButton, Toolbar, withNotices } from '@wordpress/components';
 import {
 	BlockControls,
 	BlockIcon,
-	MediaPlaceholder,
+	calculatePreferedImageSize,
 	MEDIA_TYPE_IMAGE,
+	MediaPlaceholder,
 	MediaUpload,
 } from '@wordpress/block-editor';
 import { Component } from '@wordpress/element';
@@ -21,15 +22,6 @@ import { __ } from '@wordpress/i18n';
  * Internal dependencies
  */
 import icon from './media-container-icon';
-
-export function calculatePreferedImageSize( image, container ) {
-	const maxWidth = container.clientWidth;
-	const exceedMaxWidth = image.width > maxWidth;
-	const ratio = image.height / image.width;
-	const width = exceedMaxWidth ? maxWidth : image.width;
-	const height = exceedMaxWidth ? maxWidth * ratio : image.height;
-	return { width, height };
-}
 
 class MediaContainer extends Component {
 	constructor() {

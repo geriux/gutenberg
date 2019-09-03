@@ -13,6 +13,8 @@ import { View, Image } from 'react-native';
  */
 import { calculatePreferedImageSize } from './utils';
 
+export { calculatePreferedImageSize };
+
 class ImageSize extends Component {
 	constructor() {
 		super( ...arguments );

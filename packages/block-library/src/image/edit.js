@@ -50,10 +50,11 @@ import {
 	BlockAlignmentToolbar,
 	BlockControls,
 	BlockIcon,
+	ImageSize,
 	InspectorControls,
 	MediaPlaceholder,
-	URLPopover,
 	RichText,
+	URLPopover,
 } from '@wordpress/block-editor';
 import {
 	Component,
@@ -71,7 +72,6 @@ import { speak } from '@wordpress/a11y';
  */
 import { createUpgradedEmbedBlock } from '../embed/util';
 import icon from './icon';
-import ImageSize from './image-size';
 
 /**
  * Module constants
