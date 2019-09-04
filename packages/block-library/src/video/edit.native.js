@@ -24,12 +24,13 @@ import {
 } from '@wordpress/components';
 
 import {
+	BlockControls,
 	Caption,
+	InspectorControls,
+	MEDIA_TYPE_VIDEO,
 	MediaPlaceholder,
 	MediaUpload,
-	MEDIA_TYPE_VIDEO,
-	BlockControls,
-	InspectorControls,
+	MediaUploadProgress,
 } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 import { isURL } from '@wordpress/url';
@@ -38,7 +39,6 @@ import { doAction, hasAction } from '@wordpress/hooks';
 /**
  * Internal dependencies
  */
-import MediaUploadProgress from '../image/media-upload-progress';
 import style from './style.scss';
 import SvgIcon from './icon';
 import SvgIconRetry from './icon-retry';
