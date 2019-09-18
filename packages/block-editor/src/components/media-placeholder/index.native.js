@@ -51,6 +51,8 @@ function MediaPlaceholder( props ) {
 			instructions = __( 'ADD IMAGE' );
 		} else if ( isVideo ) {
 			instructions = __( 'ADD VIDEO' );
+		} else {
+			instructions = __( 'ADD IMAGE OR VIDEO' );
 		}
 	}
 
