@@ -88,3 +88,5 @@ Object.keys( mockNativeModules ).forEach( ( module ) => {
 		jest.doMock( module, () => mockNativeModules[ module ], { virtual: true } );
 	}
 } );
+
+jest.mock( 'Platform', () => ( { OS: '', select: () => '' } ) );
