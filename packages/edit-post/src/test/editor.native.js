@@ -11,6 +11,7 @@ import { registerCoreBlocks } from '@wordpress/block-library';
 import { store } from '@wordpress/editor'; // eslint-disable-line no-unused-vars
 
 jest.mock( '../components/layout', () => () => 'Layout' );
+jest.mock( 'Platform', () => ( { select: () => '' } ) );
 
 /**
  * Internal dependencies
