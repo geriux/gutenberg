@@ -19,9 +19,8 @@ import {
 	Icon,
 	Toolbar,
 	ToolbarButton,
-	withTheme,
 } from '@wordpress/components';
-
+import { withPreferredColorScheme } from '@wordpress/compose';
 import {
 	Caption,
 	MediaPlaceholder,
@@ -152,7 +151,7 @@ class VideoEdit extends React.Component {
 			return <Icon icon={ SvgIconRetry } { ...style.icon } />;
 		}
 
-		const iconStyle = this.props.useStyle( style.icon, style.iconDark );
+		const iconStyle = this.props.getStylesFromColorScheme( style.icon, style.iconDark );
 		return <Icon icon={ SvgIcon } { ...( ! isMediaPlaceholder ? style.iconUploading : iconStyle ) } />;
 	}
 
@@ -264,4 +263,4 @@ class VideoEdit extends React.Component {
 	}
 }
 
-export default withTheme( VideoEdit );
+export default withPreferredColorScheme( VideoEdit );
